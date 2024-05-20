@@ -70,12 +70,14 @@
             <h4>OR VISIT US AT OUR</h4>
             <h2>PHYSICAL LOCATION</h2>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.321356159114!2d28.20695667644037!3d-25.891804351325828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1711025768247!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.321356159114!2d28.20695667644037!3d-25.891804351325828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1711025768247!5m2!1sen!2sza" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
         </div>
 
+
+<!--Form Field-->
         <div class="flexRight">
 
             <div class="formContainer">
@@ -103,10 +105,27 @@
                     </fieldset>
     
                     <fieldset>
-                        <button placeholder="submitButton" type="submit" id="contactUsSubmit" tabindex="5">Submit</button>
+                        <section>
+                            <button class="show-modal">Submit</button>
+                            <span class="overlay"></span>
+                            <div class="modal-box">
+                                <i class="fa-regular fe-circle-check bg-green"></i>
+                                <h2>Success</h2>
+                                <h3>You have successfully sent a message</h3>
+                                <div class="buttons">
+                                    <buttons class="close-btn">Okay, Close</buttons>
+                                    <button>View more</button>
+                                </div>  
+                            </div>
+                        </section>
+                        <script>
+                            const section = document.querySelector("selection"), overlay = document.querySelector(".overlay"), showBtn = document.querySelector("show-modal"), closeBtn = document.querySelector(".close-btn");
+                            showBtn.addEventListener("click", () => section.classList.add("active"));
+                            overlay.addEventListener("click", () => section.classList.remove("active"));
+                            closeBtn.addEventListener("click", ()=> section.classList.remove("active"));
+                        </script>
+                        
                     </fieldset>
-        
-        
                 </form>
             </div>
         </div>
