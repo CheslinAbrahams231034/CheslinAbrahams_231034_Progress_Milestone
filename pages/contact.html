@@ -91,12 +91,12 @@
 
                     <p class="formHeadings">Email Address</p>
                     <fieldset>
-                        <input placeholder="Email Address" type="text" tabindex="2" required>
+                        <input placeholder="Email Address" type="email" tabindex="2" required>
                     </fieldset>
 
                     <p class="formHeadings">Subject</p>
                     <fieldset>
-                        <input placeholder="Subject" type="email" tabindex="3" required>
+                        <input placeholder="Subject" type="text" tabindex="3" required>
                     </fieldset>
 
                     <p class="formHeadings">Message</p>
@@ -105,33 +105,24 @@
                     </fieldset>
     
                     <fieldset>
-                        <section>
-                            <button class="show-modal">Submit</button>
-                            <span class="overlay"></span>
-                            <div class="modal-box">
-                                <i class="fa-regular fe-circle-check bg-green"></i>
-                                <h2>Success</h2>
-                                <h3>You have successfully sent a message</h3>
-                                <div class="buttons">
-                                    <buttons class="close-btn">Okay, Close</buttons>
-                                    <button>View more</button>
-                                </div>  
-                            </div>
-                        </section>
+                        <button onclick="callAlert('thank you for submitting')"> Submit </button>
                         <script>
-                            const section = document.querySelector("selection"), overlay = document.querySelector(".overlay"), showBtn = document.querySelector("show-modal"), closeBtn = document.querySelector(".close-btn");
-                            showBtn.addEventListener("click", () => section.classList.add("active"));
-                            overlay.addEventListener("click", () => section.classList.remove("active"));
-                            closeBtn.addEventListener("click", ()=> section.classList.remove("active"));
-                        </script> 
-                        
+                            function callAlert(msg){
+                                alert(msg, 3000)
+                            }
+                        </script>
                     </fieldset>
-                    
+        
                 </form>
             </div>
         </div>
+
+        <script src="/js/script.js">
+        </script>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 
 
