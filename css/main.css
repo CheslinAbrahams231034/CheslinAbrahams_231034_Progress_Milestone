@@ -474,10 +474,10 @@ ul {
 #contact h3{
     color:#ffffff;
     display: block;
-    font-family: 'Poppins' static;
+    font-family: 'Poppins-Bold';
     font-size: 20px;
     font-weight: 400;
-    width: 200px;
+    width: 150px;
     margin-bottom: 20px;
 }   
 
@@ -652,6 +652,42 @@ fieldset{
     align-items: center;
     font-family: 'Poppins-Normal';
 
+}
+
+
+
+/* Filter */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #8134aa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(58, 58, 58, 0.1);
+    color: white;
+}
+
+.filter-section img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.filter-section select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+}
+
+.filter-icon, .view-icons, .showing-results, .sort-by {
+    display: flex;
+    align-items: center;
+}
+
+.showing-results, .sort-by {
+    gap: 5px;
 }
 
 .flexItem7 a{
