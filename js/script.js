@@ -1,33 +1,70 @@
-window.alert = function(message, timeout=nul){
-    const alert = document.createElement('div');
-    alert.classList.add('alert');
-    const alertButton = document.createElement('button');
-    alertButton.innerText = 'OK';
-    alert.setAttribute('style', ` 
-    position:fixed;
-    top: 100px%;
-    left: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 5px 0 #0000022;
+/*
+window.alert = function(message, timeout = null) {
+    const modal = document.getElementById("myModal");
+    const modalMessage = document.getElementById("modal-message");
+    const span = document.getElementsByClassName("close")[0];
 
-`); 
-alert.innerHTML = `<span>${message}</span>`;
 
-/*const appendChild(alertButton);*/
-    /*alert.innerText = message;*/
-    alert.appendChild(alertButton);
-    
-    alertButton.addEventListener('click',  (e)=>{
-        alert.remove();
-    });
+    modalMessage.innerText = message;
 
-    if(time != null){
-        setTimeout(()=>{
-            alert.remove();  
-        }, Number(timeout))
+    modal.style.display = "block";
+
+
+    span.onclick = function() {
+        modal.style.display = "none";
     }
-    document.body.appendChild(alert);
-        
+
+
+    if (timeout != null) {
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, Number(timeout));
+    }
+
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+};
+
+
+function callAlert() {
+    const name = document.getElementById("name").value;
+    const message = `Thank you, ${name}, for submitting your message!`;
+    alert(message, 3000);
+}*/
+
+//This was very mean to me
+
+window.alert = function(message, timeout = null) {
+    const modal = document.getElementById("myModal");
+    const modalMessage = document.getElementById("modal-message");
+    const span = document.getElementsByClassName("close")[0];
+
+    modalMessage.innerText = message;
+    modal.style.display = "block";
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    if (timeout != null) {
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, Number(timeout));
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+};
+
+function callAlert() {
+    const name = document.querySelector('input[placeholder="Name"]').value;
+    const message = `Thank you, ${name}, for submitting your message!`;
+    alert(message, 3000);
 }
-            
