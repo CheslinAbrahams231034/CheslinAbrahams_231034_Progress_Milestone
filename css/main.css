@@ -917,4 +917,58 @@ fieldset{
     cursor: pointer;
 }
 
+.aboutUsSection{
+    background-color: #8134aa;
+    padding-bottom: 75px;
+    padding-top: 5px;
+}
+.aboutUsSectionOne{
+    background-color: #8134aa;
+    color: white;
+    padding: 20px;
+    text-align: justify;
+}
 
+.aboutUsSectionOne h1{
+    font-family: 'Poppins-Bold';
+}
+
+.aboutUsSectionOne h2{
+    font-family: 'Poppins-Bold';
+}
+
+
+.aboutUsSectionTwo{
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+.aboutUsSectionTwo h1{
+    font-family: 'Poppins-Bold';
+}
+
+.aboutUsSectionTwo h2{
+    font-family: 'Poppins-Bold';
+}
+
+.aboutUsSectionTwo a{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Poppins-Bold' static;
+    font-size: 15px;
+    font-weight: bold;
+    width: 200px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+
+    
+}
