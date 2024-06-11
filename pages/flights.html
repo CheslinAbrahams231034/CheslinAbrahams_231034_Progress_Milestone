@@ -4,7 +4,6 @@
         <head>
             <meta charset="UTF-8">
             <meta http=equiv="X-UX-Compatible" content="IE-edge">
-            <meta name="viewport" content="width-device-width, Initial-scale-1,0">
             <meta name="keyword" content=" HTML, CSS, Template, Bootstrap">
             <meta name="author" content="Cheslin Abrahams 231034">
             
@@ -21,6 +20,19 @@
 
 </head>
 <body>
+
+<!-- Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+            <p>No items in cart.</p>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
     <section class="headerFlights">
         <nav>
             <a href="index.html"><img src="../assets/Assets/Images/logo.png"></a>
@@ -195,7 +207,7 @@
                   <a3 href="../pages/contact.html" class="btn">View Cart</a3>
         </div>
     </section>
-    
+    <script src="../js/script.js"></script>
 </body>
 
 

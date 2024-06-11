@@ -33,14 +33,19 @@ function callAlert() {
 
 
 
-// Variables for the cart /*this will be for when someone adds an item to the cart and th icon number will increase or decrease.*/
-/*let cartCount = 0;
+    // why isnt its WORKINGGGGGGG!
+    var modal = document.getElementById("cartModal");
 
-/*
-if (itemAddedToCart) {
-    cartCount++; // Increase the cart count by 1
-}
-*/
+    var btn = document.querySelector(".flexItem8 .btn");
 
-// Display the cart count
-// console.log("Cart Count:", cartCount);
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
