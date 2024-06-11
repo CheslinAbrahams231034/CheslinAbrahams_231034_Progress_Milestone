@@ -34,18 +34,38 @@ function callAlert() {
 
 
     // why isnt its WORKINGGGGGGG!
-    var modal = document.getElementById("cartModal");
-
-    var btn = document.querySelector(".flexItem8 .btn");
-
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const modal = document.getElementById('cartModal');
+        const btn = document.getElementById('viewCartButton');
+        const span = document.getElementsByClassName('close-button')[0];
+        const continueBtn = document.getElementById('continueShoppingButton');
+        const checkoutBtn = document.getElementById('checkoutButton');
+    
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = 'block';
         }
-    }
+    
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+    
+        // When the user clicks the "Continue Shopping" button, close the modal
+        continueBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+    
+        // When the user clicks the "Check Out" button, navigate to the homepage
+        checkoutBtn.onclick = function() {
+            window.location.href = '/';
+        }
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    });
+    
