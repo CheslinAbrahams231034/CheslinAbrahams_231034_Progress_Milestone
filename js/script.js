@@ -41,31 +41,66 @@ function callAlert() {
         const continueBtn = document.getElementById('continueShoppingButton');
         const checkoutBtn = document.getElementById('checkoutButton');
     
-        // When the user clicks the button, open the modal
+        
         btn.onclick = function() {
             modal.style.display = 'block';
         }
     
-        // When the user clicks on <span> (x), close the modal
+      
         span.onclick = function() {
             modal.style.display = 'none';
         }
     
-        // When the user clicks the "Continue Shopping" button, close the modal
+        
         continueBtn.onclick = function() {
             modal.style.display = 'none';
         }
     
-        // When the user clicks the "Check Out" button, navigate to the homepage
+   
         checkoutBtn.onclick = function() {
             window.location.href = '/';
         }
     
-        // When the user clicks anywhere outside of the modal, close it
+        
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
             }
         }
     });
+
     
+
+
+    //Search Bar Thingy
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchBar = document.getElementById('searchBar');
+    
+        searchBar.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const searchTerm = searchBar.value.toLowerCase().trim();
+                
+                // Mapping of search terms to section IDs
+                const flightSections = {
+                    'the classic mars': 'classicMars',
+                    "neptune's cosmic drive": 'neptuneCosmicDrive',
+                    'the giants journey': 'giantsJourney',
+                    'ring around saturn': 'ringAroundSaturn',
+                    'uranus uncharted': 'uranusUncharted',
+                    'moonlight meander': 'moonlightMeander'
+                };
+    
+                const sectionId = flightSections[searchTerm];
+    
+                if (sectionId) {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    alert('Flight not found');
+                }
+            }
+        });
+    });
